@@ -58,6 +58,36 @@ namespace thinkfin.identity.Configuration
                         Constants.StandardScopes.OfflineAccess
                     },
                     AccessTokenType = AccessTokenType.Jwt
+                },
+                 new Client
+                {
+                    ClientId = @"thinkfinweb",
+                    ClientName = @"thinkfin web client",
+                    ClientSecrets = new List<ClientSecret>
+                    {
+                        new ClientSecret("idsrv3test".Sha256())
+                    },
+                    Enabled = true,
+                    Flow = Flows.Hybrid,
+                    RequireConsent = true,
+                    AllowRememberConsent = true,
+                    RedirectUris = new List<string>
+                    {
+                        "https://localhost:44303/"
+                    },
+                    PostLogoutRedirectUris = new List<string>
+                    {
+                        "https://localhost:44303/"
+                    },
+                    ScopeRestrictions = new List<string>
+                    {
+                        Constants.StandardScopes.OpenId,
+                        Constants.StandardScopes.Profile,
+                        Constants.StandardScopes.Email,
+                        Constants.StandardScopes.Roles,
+                        Constants.StandardScopes.OfflineAccess
+                    },
+                    AccessTokenType = AccessTokenType.Jwt
                 }
             };
         }

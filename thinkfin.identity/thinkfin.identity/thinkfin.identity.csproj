@@ -71,6 +71,7 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <EmbeddedResource Include="Configuration\idsrv3test.pfx" />
+    <None Include="Properties\PublishProfiles\localiis.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
