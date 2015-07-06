@@ -59,7 +59,7 @@ namespace thinkfin.identity.Configuration
                     },
                     AccessTokenType = AccessTokenType.Jwt
                 },
-                 new Client
+                new Client
                 {
                     ClientId = @"thinkfinweb",
                     ClientName = @"thinkfin web client",

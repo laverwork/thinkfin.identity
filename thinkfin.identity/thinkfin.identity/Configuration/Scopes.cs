@@ -14,7 +14,15 @@ namespace thinkfin.identity.Configuration
                 StandardScopes.Roles,
                 StandardScopes.Profile,
                 StandardScopes.Email,
-                StandardScopes.OfflineAccess
+                StandardScopes.OfflineAccess,
+                new Scope
+                {
+                    Enabled = true,
+                    Name = "marketdataApi",
+                    Description = "Access to a sample API",
+                    Type = ScopeType.Resource
+                }
+
             };
         }
     }

@@ -11,7 +11,7 @@ namespace thinkfin.identity
                 "/core",
                 coreApp => coreApp.UseIdentityServer(new IdentityServerOptions
                 {
-                    SiteName = "Standalone Identity Server",
+                    SiteName = "thinkfin",
                     SigningCertificate = Cert.Load(),
                     Factory = InMemoryFactory.Create(Users.Get(), Clients.Get(), Scopes.Get()),
                     RequireSsl = true
